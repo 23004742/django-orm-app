@@ -19,11 +19,34 @@ Write your own steps
 
 ## PROGRAM
 
-Include your code here
+admin.py
+
+from django.contrib import admin
+from .models import footballplayer,footballplayerAdmin
+admin.site.register(footballplayer,footballplayerAdmin)
+
+models.py
+
+from django.db import models
+from django.contrib import admin
+class footballplayer (models.Model):
+    name=models.CharField(max_length=15)
+    weight=models.IntegerField()
+    age=models.IntegerField()
+    members=models.CharField(max_length=20)
+    experiance=models.IntegerField()
+
+class footballplayerAdmin(admin.ModelAdmin):
+    list_display=('name','weight','age','members','experiance')
+
+
 
 ## OUTPUT
 
-Include the screenshot of your admin page.
+![Screenshot 2023-12-28 210344](https://github.com/23004742/django-orm-app/assets/150319318/029281fe-4c1a-42c5-a64d-c866ed0d254f)
+
 
 
 ## RESULT
+Thus the program for creating a database using ORM hass been executed successfully
+
