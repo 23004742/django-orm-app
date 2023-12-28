@@ -8,19 +8,22 @@ To develop a Django application to store and retrieve data from a database using
 Include your ER diagram here
 
 ## DESIGN STEPS
+STEP 1:
+Clone the problem from GitHub
 
-### STEP 1:
+STEP 2:
+Create a new app in Django project
 
-### STEP 2:
+STEP 3:
+Enter the code for admin.py and models.py
 
-### STEP 3:
+STEP 4:
+Execute Django admin and create 10 Football players
 
-Write your own steps
 
 ## PROGRAM
-
+```
 admin.py
-
 from django.contrib import admin
 from .models import footballplayer,footballplayerAdmin
 admin.site.register(footballplayer,footballplayerAdmin)
@@ -39,7 +42,7 @@ class footballplayer (models.Model):
 class footballplayerAdmin(admin.ModelAdmin):
     list_display=('name','weight','age','members','experiance')
 
-
+```
 
 ## OUTPUT
 
